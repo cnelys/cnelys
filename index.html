@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulario de registro</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static','filename'='css/miestilo.css') }}" />
+  </head>
+  <body>
+    <h1>Registro para vacunación COVID-19</h1>
+
+    <form
+      action=""
+      method="get"
+      name="formRegistro"
+      onSubmit="return validar_formulario(event);"
+    >
+      <p>Nombre: <input type="text" id="nombre" name="nombre" /></p>
+
+      <p>
+        Usuario:
+        <input type="text" id="username" name="username" />
+      </p>
+
+      <p>
+        Sexo: <input type="radio" id="sexo" name="sexo" value="h" /> hombre
+        <input type="radio" name="sexo" id="sexo" value="m" /> mujer
+      </p>
+
+      <p>
+        Correo: <input type="text" id="correo" name="correo" maxlength="100" />
+      </p>
+
+      <p>
+        Contraseña:
+        <input type="password" id="password" name="password" />
+      </p>
+
+      <img src="{{ url_for('static','filename'='css/miestilo.css') }}.png" 
+          onmouseover="mostrarPassword()";
+          onmouseout="ocultarPassword()";>
+
+      <p>
+        <input type="checkbox" name="condiciones" /> Declaro haber leido y
+        acepto las condiciones generales del programa y la normativa sobre
+        protección de datos
+      </p>
+
+      <button type="submit" value="Enviar">Enviar</button>
+    </form>
+
+    <script src="{{ url_for('static','filename'='css/miestilo.css') }}"></script>
+  </body>
+</html>
